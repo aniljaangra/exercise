@@ -33,6 +33,10 @@ serialEx( list)
 
 return;
 
+////////////////////////////////////////////////
+//              FINISH
+////////////////////////////////////////////////
+
 const concat = list => Array.prototype.concat.bind(list)
 const promiseConcat = f => x => f().then(concat(x))
 const promiseReduce = (acc, x) => acc.then(promiseConcat(x))
